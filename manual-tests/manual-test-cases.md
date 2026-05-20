@@ -1,6 +1,6 @@
 # Manual Test Cases — Startup Quest
-**Tester:** [ใส่ชื่อคุณ]
-**Date:** [ใส่วันที่ทดสอบ]
+**Tester:** [Korn]
+**Date:** [2026-05-18 - 2026-05-19]
 **App URL:** https://main.startup-simulation.pages.dev/
 **Browser:** [เช่น Chrome 124, Safari 17]
 
@@ -35,7 +35,7 @@
 | **Preconditions** | เปิดแอปใหม่ ช่องชื่อว่างเปล่า |
 | **Steps** | 1. เปิดแอป <br>2. ไม่กรอกชื่อ (ปล่อยว่าง) <br>3. กดปุ่ม "สร้างห้อง" |
 | **Test Data** | name = "" |
-| **Expected Result** | ระบบไม่อนุญาตให้สร้างห้อง และแสดง error message หรือ disable ปุ่ม |
+| **Expected Result** | ระบบไม่อนุญาตให้สร้างห้อง และแสดง error message |
 | **Actual Result** | |
 | **Status** | Not Run |
 | **Bug ref** | — |
@@ -107,7 +107,7 @@
 | **Preconditions** | เปิดแอปใหม่ |
 | **Steps** | 1. เปิดแอป <br>2. กรอก "   " (space 3 ตัว) ในช่องชื่อ <br>3. กดปุ่ม "สร้างห้อง" |
 | **Test Data** | name = "   " |
-| **Expected Result** | ระบบควร trim space และถือว่าชื่อว่าง → ไม่อนุญาตให้สร้างห้อง |
+| **Expected Result** | ไม่อนุญาตให้สร้างห้อง |
 | **Actual Result** | |
 | **Status** | Not Run |
 | **Bug ref** | — |
@@ -143,7 +143,7 @@
 | **Preconditions** | เปิดแอปใหม่ |
 | **Steps** | 1. เปิดแอป <br>2. กรอกชื่อ "สมชาย" <br>3. กรอกรหัสห้อง "000000" (รหัสที่ไม่มีห้องนี้) <br>4. กดปุ่ม "เข้าห้อง" |
 | **Test Data** | name = "สมชาย", room code = "000000" |
-| **Expected Result** | ระบบแสดง error message เช่น "ไม่พบห้องนี้" และไม่เปลี่ยนหน้า |
+| **Expected Result** | ระบบแสดง room not found "ไม่พบห้องนี้"|
 | **Actual Result** | |
 | **Status** | Not Run |
 | **Bug ref** | — |
@@ -161,7 +161,7 @@
 | **Preconditions** | เปิดแอปใหม่ |
 | **Steps** | 1. เปิดแอป <br>2. กรอกชื่อ "สมชาย" <br>3. ไม่กรอกรหัสห้อง (ปล่อยว่าง) <br>4. กดปุ่ม "เข้าห้อง" |
 | **Test Data** | name = "สมชาย", room code = "" |
-| **Expected Result** | ระบบไม่อนุญาตให้เข้าห้อง หรือ disable ปุ่ม "เข้าห้อง" |
+| **Expected Result** | ระบบไม่อนุญาตให้เข้าห้อง |
 | **Actual Result** | |
 | **Status** | Not Run |
 | **Bug ref** | — |
@@ -251,7 +251,7 @@
 | **Preconditions** | สร้างห้อง มีผู้เล่น 1 คน (host) ยังไม่เติมบอท |
 | **Steps** | 1. สร้างห้อง <br>2. ไม่กดเติมบอท <br>3. พยายามกดปุ่ม "เริ่มเกม" |
 | **Test Data** | จำนวนผู้เล่น = 1 คน |
-| **Expected Result** | ปุ่ม "เริ่มเกม" ถูก disable หรือระบบแสดง error ว่าผู้เล่นยังไม่ครบ |
+| **Expected Result** | ปุ่ม "เริ่มเกม" กดไม่ได้ |
 | **Actual Result** | |
 | **Status** | Not Run |
 | **Bug ref** | — |
@@ -326,7 +326,7 @@
 | **Expected Result** | เกมเริ่มและผู้เล่นถูกกำหนดบทบาทเป็น สายลับคู่แข่ง (Competitor Spy) |
 | **Actual Result** | |
 | **Status** | Not Run |
-| **Bug ref** | — |
+| **Bug ref** |  |
 
 ---
 
